@@ -4,11 +4,17 @@ use std::io;
 use std::io::Write;
 use rand::Rng;
 use dsa::fibonacci::f;
+use dsa::arrays::bubble_sort;
+use dsa::arrays::selection_sort;
 
 const PROMPT_STR: &str = "Please input your number: ";
 
 fn main(){
-    let list = f(100);
+    let mut vec = vec![7, 12, 9, 11, 3];
+    selection_sort(&mut vec);
+    return;
+
+    let mut list = f(100);
     for x in list.iter(){
         println!("{}", x);
     }
